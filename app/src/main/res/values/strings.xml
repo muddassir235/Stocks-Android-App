@@ -1,0 +1,40 @@
+<resources xmlns:xliff="http://schemas.android.com/tools">
+  <string name="app_name">Stock Hawk</string>
+
+  <string name="action_example">Example action</string>
+
+  <string name="action_settings">Settings</string>
+  <string name="action_change_units">Change Units</string>
+  <string name="symbol_search">Symbol Search</string>
+  <string name="content_test">Search for a Stock Symbol</string>
+  <string name="input_hint">FB</string>
+  <string name="input_prefill"></string>
+  <string name="network_toast">Uh-oh! This app requires an internet connection</string>
+  <!-- Format humidity -->
+  <string name="format_humidity"><xliff:g id="humidity">%1.0f</xliff:g>%%</string>
+  <string name="stock_list_content_description_percent_change">The&#160;<xliff:g id="symbol">%s</xliff:g>&#160;stock&#160;has&#160;a&#160;current&#160;value&#160;of&#160;<xliff:g id="value">%s</xliff:g>&#160;which&#160;is&#160;<xliff:g id="percentChange">%f</xliff:g>&#160;percent&#160;<xliff:g id="direction">%s</xliff:g>&#160;from&#160;before</string>
+  <string name="stock_list_content_description_point_change">The&#160;<xliff:g id="symbol">%s</xliff:g>&#160;stock&#160;has&#160;a&#160;current&#160;value&#160;of&#160;<xliff:g id="value">%s</xliff:g>&#160;which&#160;is&#160;<xliff:g id="change">%f</xliff:g>&#160;points&#160;<xliff:g id="direction">%s</xliff:g>&#160;from&#160;before</string>
+  <string name="add_new_stock_button">Add new Stock Button</string>
+    <string name="title_stock_list">Stocks</string>
+    <string name="title_stock_detail">Stock Detail</string>
+
+  <string name="stock_exists_key">STOCK_EXISTS</string>
+  <string name="stock_exists">exists</string>
+  <string name="not_stock__exists">not_exists</string>
+
+  <string name="yahoo_chart_url">http://chartapi.finance.yahoo.com/instrument/1.0/<xliff:g id="symbol">%s</xliff:g>/chartdata;type=quote;range=<xliff:g id="span">%s</xliff:g>/json</string>
+  <string name="bid_price">Bid Price:</string>
+  <string name="no_internet">No Internet</string>
+  <string name="loading_failed">Could not load data.</string>
+  <string name="error_string">An error occured</string>
+  <string name="empty_list">Please add a stock :)</string>
+  <string name="select_a_stock">Please select a stock :)</string>
+  <string name="back_button">Back</string>
+  <string name="stock_graph">Stock Graph</string>
+  <string name="constant_value">Constant Value Icon</string>
+  <string name="up_arrow">Up Arrow</string>
+  <string name="down_arrow">Down Arrow</string>
+
+  <string name="appwidget_text">STOCKS</string>
+
+</resources>

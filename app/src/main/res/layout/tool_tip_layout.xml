@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:elevation="5dp"
+    android:background="@drawable/percent_change_pill">
+    <TextView
+        android:id="@+id/value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="@color/darker_grey"
+        android:textStyle="bold">
+    </TextView>
+    <TextView
+        android:id="@+id/stamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="@color/green_text_50"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        >
+    </TextView>
+</LinearLayout>

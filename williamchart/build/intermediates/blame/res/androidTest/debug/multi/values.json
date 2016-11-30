@@ -1,0 +1,121 @@
+[
+    {
+        "outputFile": "C:\\Users\\hp\\Desktop\\CurrentRepos\\GitHub\\StockHawk-master\\williamchart\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 899,
+                    "endColumn": 44,
+                    "endOffset": 939
+                },
+                "from": {
+                    "file": "C:\\Users\\hp\\Desktop\\CurrentRepos\\GitHub\\StockHawk-master\\williamchart\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 899,
+                        "endColumn": 44,
+                        "endOffset": 939
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 944,
+                    "endColumn": 41,
+                    "endOffset": 981
+                },
+                "from": {
+                    "file": "C:\\Users\\hp\\Desktop\\CurrentRepos\\GitHub\\StockHawk-master\\williamchart\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 944,
+                        "endColumn": 41,
+                        "endOffset": 981
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 986,
+                    "endColumn": 48,
+                    "endOffset": 1030
+                },
+                "from": {
+                    "file": "C:\\Users\\hp\\Desktop\\CurrentRepos\\GitHub\\StockHawk-master\\williamchart\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 986,
+                        "endColumn": 48,
+                        "endOffset": 1030
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 1035,
+                    "endColumn": 40,
+                    "endOffset": 1071
+                },
+                "from": {
+                    "file": "C:\\Users\\hp\\Desktop\\CurrentRepos\\GitHub\\StockHawk-master\\williamchart\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 1035,
+                        "endColumn": 40,
+                        "endOffset": 1071
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 1076,
+                    "endColumn": 44,
+                    "endOffset": 1116
+                },
+                "from": {
+                    "file": "C:\\Users\\hp\\Desktop\\CurrentRepos\\GitHub\\StockHawk-master\\williamchart\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 1076,
+                        "endColumn": 44,
+                        "endOffset": 1116
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 1121,
+                    "endColumn": 41,
+                    "endOffset": 1158
+                },
+                "from": {
+                    "file": "C:\\Users\\hp\\Desktop\\CurrentRepos\\GitHub\\StockHawk-master\\williamchart\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 1121,
+                        "endColumn": 41,
+                        "endOffset": 1158
+                    }
+                }
+            }
+        ]
+    }
+]

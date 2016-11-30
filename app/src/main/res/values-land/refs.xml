@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="stock_detail_fragment" type="layout">@layout/stock_detail_landscape</item>
+</resources>

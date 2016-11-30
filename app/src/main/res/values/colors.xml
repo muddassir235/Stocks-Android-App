@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="material_blue_700">#1976D2</color>
+  <color name="material_blue_500">#2196F3</color>
+  <color name="material_red_700">#D50000</color>
+  <color name="material_green_700">#00C853</color>
+
+
+  <color name="green_700">#388E3C</color>
+  <color name="green_accent_200">#69F0AE</color>
+
+  <color name="white">#FFFFFF</color>
+  <color name="transparent_white">#44FFFFFF</color>
+  <color name="dark_grey">#212121</color>
+  <color name="grey">#3d3d3d</color>
+  <color name="light_grey">#5b5b5b</color>
+  <color name="darker_grey">#1d1d1d</color>
+
+  <color name="purple_400">#D500F9</color>
+  <color name="special_blue">#18FFFF</color>
+  <color name="teal_accent">#64FFDA</color>
+
+  <color name="green_50">#E8F5E9</color>
+  <color name="green_text_50">#858c85</color>
+  <color name="green_100">#C8E6C9</color>
+  <color name="green_text_100">#7c8e7c</color>
+  <color name="green_150">#b3d6b4</color>
+  <color name="green_text_150">#809981</color>
+  <color name="green_200">#A5D6A7</color>
+  <color name="green_text_200">#719673</color>
+  <color name="green_250">#9ad49d</color>
+  <color name="green_text_250">#69936b</color>
+  <color name="green_300">#81C784</color>
+  <color name="green_text_300">#5a8e5c</color>
+  <color name="green_350">#76c67a</color>
+  <color name="green_text_350">#4c834f</color>
+  <color name="green_400">#66BB6A</color>
+  <color name="green_text_400">#49894c</color>
+  <color name="green_450">#5bb360</color>
+  <color name="green_text_450">#418444</color>
+  <color name="green_500">#4CAF50</color>
+  <color name="green_text_500">#37863a</color>
+
+  <color name="text_normal">#6c6b5c</color>
+
+  <color name="red_50">#FFEBEE</color>
+  <color name="red_text_50">#7c686c</color>
+  <color name="red_100">#FFCDD2</color>
+  <color name="red_text_100">#87686b</color>
+  <color name="red_150">#f4bbc0</color>
+  <color name="red_text_150">#846164</color>
+  <color name="red_200">#EF9A9A</color>
+  <color name="red_text_200">#835050</color>
+  <color name="red_250">#e48d8d</color>
+  <color name="red_text_250">#844f4f</color>
+  <color name="red_300">#E57373</color>
+  <color name="red_text_300">#894141</color>
+  <color name="red_350">#dc6363</color>
+  <color name="red_text_350">#863838</color>
+  <color name="red_400">#EF5350</color>
+  <color name="red_text_400">#8c2c2a</color>
+  <color name="red_450">#ea4643</color>
+  <color name="red_text_450">#8f2624</color>
+  <color name="red_500">#F44336</color>
+  <color name="red_text_500">#931f16</color>
+
+</resources>

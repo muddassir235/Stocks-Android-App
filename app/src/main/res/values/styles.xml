@@ -1,0 +1,67 @@
+<resources>
+
+  <!-- Base application theme. -->
+  <style name="AppTheme"
+      parent="Theme.AppCompat">
+      <item name="colorPrimary">@color/green_500</item>
+      <item name="colorPrimaryDark">@color/green_700</item>
+      <item name="colorAccent">@color/green_500</item>
+    <!-- Customize your theme here. -->
+  </style>
+
+  <style name="AppTheme.NoActionBar">
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>
+    <item name="colorPrimary">@color/green_500</item>
+    <item name="colorPrimaryDark">@color/green_700</item>
+    <item name="colorAccent">@color/green_250</item>
+
+  </style>
+
+  <style name="AppTheme.DetailNoActionBar">
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>
+    <item name="colorPrimary">@color/green_500</item>
+    <item name="colorPrimaryDark">@color/darker_grey</item>
+    <item name="colorAccent">@color/green_500</item>
+
+  </style>
+
+
+  <style name="PercentChangeTextStyle">
+    <item name="android:textSize">16sp</item>
+    <item name="android:textColor">#FFF</item>
+    <item name="android:textStyle">bold</item>
+  </style>
+  <style name="BidPriceTextStyle">
+    <item name="android:textSize">25sp</item>
+    <item name="android:textColor">@color/white</item>
+  </style>
+  <style name="StockSymbolTextStyle">
+    <item name="android:textSize">25sp</item>
+    <item name="android:textAllCaps">true</item>
+    <item name="android:textColor">@color/white</item>
+  </style>
+
+  <style name="SwitchTheme" parent="Theme.AppCompat.Light">
+    <!-- colorPrimary is used for the default action bar background -->
+    <item name="colorPrimary">#F1F1F1</item>
+
+    <!-- colorPrimaryDark is used for the status bar -->
+    <item name="colorPrimaryDark">#F1F1F1</item>
+
+    <!-- inactive thumb color -->
+    <item name="colorSwitchThumbNormal">#A5D6A7</item>
+    <!-- colorAccent is used as the default value for colorControlActivated,
+         which is used to tint widgets -->
+    <item name="colorAccent">@color/white</item>
+    <!-- You can also set colorControlNormal, colorControlActivated
+         colorControlHighlight, and colorSwitchThumbNormal. -->
+
+  </style>
+
+  <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+    <item name="colorAccent">@color/green_250</item>
+  </style>
+  
+</resources>

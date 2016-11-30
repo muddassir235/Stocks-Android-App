@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sam_chordas.android.stockhawk">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
+    <permission
+        android:name="com.google.android.gcm.demo.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.google.android.gcm.demo.permission.C2D_MESSAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <service
+            android:name=".service.StockTaskService"
+            android:exported="true"
+            android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY" />
+            </intent-filter>
+        </service>
+        <service android:name=".service.StockIntentService" />
+
+        <provider
+            android:name=".data.generated.QuoteProvider"
+            android:authorities="com.sam_chordas.android.stockhawk.data.QuoteProvider"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.StockListActivity"
+            android:label="@string/title_stock_list"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.StockDetailActivity"
+            android:label="@string/title_stock_detail"
+            android:parentActivityName=".ui.StockListActivity"
+            android:theme="@style/AppTheme.DetailNoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sam_chordas.android.stockhawk.ui.StockListActivity" />
+        </activity>
+
+        <receiver android:name=".ui.DetailWidgetProvider">
+            <intent-filter>
+                <action android:name="com.example.hp.sunshine.ACTION_DETAIL_DATA_UPDATED" />
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/detail_widget_provider_info" />
+        </receiver>
+
+        <service android:name=".ui.DetailWidgetProvider$DetailWidgetRemoteViewsService"
+            android:permission="android.permission.BIND_REMOTEVIEWS"/>
+    </application>
+
+</manifest>
