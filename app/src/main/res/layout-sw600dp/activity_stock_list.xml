@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:layout_weight="0"
-            android:background="@color/green_500"
+            android:background="@color/primary_color"
             >
             <FrameLayout
                 android:layout_width="284dp"
@@ -163,8 +163,8 @@
         android:layout_marginStart="229dp"
         android:src="@drawable/add_icon"
         android:contentDescription="@string/add_new_stock_button"
-        fab:fab_colorNormal="@color/green_500"
-        fab:fab_colorPressed="@color/green_700"
+        fab:fab_colorNormal="@color/primary_color"
+        fab:fab_colorPressed="@color/primary_color_dark"
         fab:fab_colorRipple="@color/material_blue_500"
         fab:fab_shadow="true"
         fab:fab_type="normal"

@@ -11,7 +11,7 @@
         android:id="@+id/action_bar_content"
         android:layout_width="match_parent"
         android:layout_height="160dp"
-        android:background="@color/green_500"
+        android:background="@color/primary_color"
         android:layout_alignParentTop="true">
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:layout_weight="0"
-            android:background="@color/green_500"
+            android:background="@color/primary_color"
             >
             <FrameLayout
                 android:layout_width="match_parent"
@@ -161,8 +161,8 @@
         android:layout_marginRight="@dimen/stock_list_margin"
         android:src="@drawable/add_icon"
         android:contentDescription="@string/add_new_stock_button"
-        fab:fab_colorNormal="@color/green_500"
-        fab:fab_colorPressed="@color/green_700"
+        fab:fab_colorNormal="@color/primary_color"
+        fab:fab_colorPressed="@color/primary_color_dark"
         fab:fab_colorRipple="@color/material_blue_500"
         fab:fab_shadow="true"
         fab:fab_type="normal"

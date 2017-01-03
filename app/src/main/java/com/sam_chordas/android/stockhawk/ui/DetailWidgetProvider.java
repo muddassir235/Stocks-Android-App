@@ -32,6 +32,8 @@ import com.sam_chordas.android.stockhawk.service.StockTaskService;
 
 import java.util.concurrent.ExecutionException;
 
+import static android.R.style.Widget;
+
 /**
  * Implementation of App Widget functionality.
  */
@@ -77,8 +79,8 @@ public class DetailWidgetProvider extends AppWidgetProvider {
             PendingIntent clickPendingIntentTemplate = TaskStackBuilder.create(context)
                     .addNextIntentWithParentStack(clickIntentTemplate)
                     .getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
-            views.setPendingIntentTemplate(R.id.weekly_forecast_list_view, clickPendingIntentTemplate);
-            views.setEmptyView(R.id.weekly_forecast_list_view, R.id.empty_view);
+            views.setPendingIntentTemplate(R.id.stocks_list, clickPendingIntentTemplate);
+            views.setEmptyView(R.id.stocks_list, R.id.empty_view);
 
             // Tell the AppWidgetManager to perform an update on the current app widget
             appWidgetManager.updateAppWidget(appWidgetId, views);
@@ -92,13 +94,13 @@ public class DetailWidgetProvider extends AppWidgetProvider {
             AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(context);
             int[] appWidgetIds = appWidgetManager.getAppWidgetIds(
                     new ComponentName(context, getClass()));
-            appWidgetManager.notifyAppWidgetViewDataChanged(appWidgetIds, R.id.weekly_forecast_list_view);
+            appWidgetManager.notifyAppWidgetViewDataChanged(appWidgetIds, R.id.stocks_list);
         }
     }
 
     @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
     private void setRemoteAdapter(Context context, @NonNull final RemoteViews views) {
-        views.setRemoteAdapter(R.id.weekly_forecast_list_view,
+        views.setRemoteAdapter(R.id.stocks_list,
                 new Intent(context, DetailWidgetRemoteViewsService.class));
     }
 
@@ -109,7 +111,7 @@ public class DetailWidgetProvider extends AppWidgetProvider {
      */
     @SuppressWarnings("deprecation")
     private void setRemoteAdapterV11(Context context, @NonNull final RemoteViews views) {
-        views.setRemoteAdapter(0, R.id.weekly_forecast_list_view,
+        views.setRemoteAdapter(0, R.id.stocks_list,
                 new Intent(context, DetailWidgetRemoteViewsService.class));
     }
     @Override
@@ -278,7 +280,6 @@ public class DetailWidgetProvider extends AppWidgetProvider {
                             data.getString(INDEX_QUOTE_ISCURRENT),
                             data.getDouble(INDEX_QUOTE_PERCENT_CHANGE_REAL)
                     );
-
                     fillInIntent.putExtra(StockDetailFragment.ARG_QUOTE_PARCABLE,quote);
                     views.setOnClickFillInIntent(R.id.detail_widget_list_item, fillInIntent);
                     return views;
@@ -321,7 +322,7 @@ public class DetailWidgetProvider extends AppWidgetProvider {
 
     public static Bitmap buildText(Context context, String string)
     {
-        Bitmap myBitmap = Bitmap.createBitmap(getPXfromDP(context,120f), getPXfromDP(context,22f), Bitmap.Config.ARGB_4444);
+        Bitmap myBitmap = Bitmap.createBitmap(getPXfromDP(context,170f), getPXfromDP(context,22f), Bitmap.Config.ARGB_4444);
         Canvas myCanvas = new Canvas(myBitmap);
         Paint paint = new Paint();
         Typeface clock = Typeface.createFromAsset(context.getAssets(),"fonts/VCR_OS.ttf");
@@ -331,8 +332,8 @@ public class DetailWidgetProvider extends AppWidgetProvider {
         paint.setStyle(Paint.Style.FILL);
         paint.setColor(Color.WHITE);
         paint.setTextSize(getPXfromDP(context,22f));
-        paint.setTextAlign(Paint.Align.CENTER);
-        myCanvas.drawText(string, getPXfromDP(context,22f), getPXfromDP(context,22f), paint);
+        paint.setTextAlign(Paint.Align.LEFT);
+        myCanvas.drawText(string, getPXfromDP(context,0f), getPXfromDP(context,22f), paint);
         return myBitmap;
     }
 

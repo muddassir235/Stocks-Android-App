@@ -48,6 +48,7 @@ import com.sam_chordas.android.stockhawk.rest.RecyclerViewItemClickListener;
 import com.sam_chordas.android.stockhawk.rest.Utils;
 import com.sam_chordas.android.stockhawk.service.StockIntentService;
 import com.sam_chordas.android.stockhawk.service.StockTaskService;
+import com.sam_chordas.android.stockhawk.touch_helper.ItemClickListener;
 import com.sam_chordas.android.stockhawk.touch_helper.SimpleItemTouchHelperCallback;
 import com.sam_chordas.android.stockhawk.ui.dummy.DummyContent;
 
@@ -217,57 +218,57 @@ public class StockListActivity extends AppCompatActivity  implements LoaderManag
         });
 
         mCursorAdapter = new QuoteCursorAdapter(this, null);
-        recyclerView.addOnItemTouchListener(new RecyclerViewItemClickListener(this,
-                new RecyclerViewItemClickListener.OnItemClickListener() {
-                    @Override public void onItemClick(View v, int position) {
-                        mCursor.moveToPosition(position);
-                        //TODO:
-                        // do something on item click
-                        Quote quote = new Quote(
-                                mCursor.getString(INDEX_QUOTE_NAME),
-                                mCursor.getString(INDEX_QUOTE_SYMBOL),
-                                mCursor.getString(INDEX_QUOTE_CURRENCY),
-                                mCursor.getString(INDEX_QUOTE_OPEN),
-                                mCursor.getString(INDEX_QUOTE_LOW),
-                                mCursor.getString(INDEX_QUOTE_HIGH),
-                                mCursor.getString(INDEX_QUOTE_MARKET_CAP),
-                                mCursor.getString(INDEX_QUOTE_PE_RATIO),
-                                mCursor.getString(INDEX_QUOTE_DIV_YIELD),
-                                mCursor.getString(INDEX_QUOTE_PERCENT_CHANGE),
-                                mCursor.getString(INDEX_QUOTE_CHANGE),
-                                mCursor.getString(INDEX_QUOTE_BID_PRICE),
-                                mCursor.getString(INDEX_QUOTE_CREATED),
-                                mCursor.getString(INDEX_QUOTE_ISUP),
-                                mCursor.getString(INDEX_QUOTE_ISCURRENT),
-                                mCursor.getDouble(INDEX_QUOTE_PERCENT_CHANGE_REAL)
-                        );
+        mCursorAdapter.setOnItemClickListener(new ItemClickListener() {
+            @Override
+            public void onClick(int position) {
+                mCursor.moveToPosition(position);
+                //TODO:
+                // do something on item click
+                Quote quote = new Quote(
+                        mCursor.getString(INDEX_QUOTE_NAME),
+                        mCursor.getString(INDEX_QUOTE_SYMBOL),
+                        mCursor.getString(INDEX_QUOTE_CURRENCY),
+                        mCursor.getString(INDEX_QUOTE_OPEN),
+                        mCursor.getString(INDEX_QUOTE_LOW),
+                        mCursor.getString(INDEX_QUOTE_HIGH),
+                        mCursor.getString(INDEX_QUOTE_MARKET_CAP),
+                        mCursor.getString(INDEX_QUOTE_PE_RATIO),
+                        mCursor.getString(INDEX_QUOTE_DIV_YIELD),
+                        mCursor.getString(INDEX_QUOTE_PERCENT_CHANGE),
+                        mCursor.getString(INDEX_QUOTE_CHANGE),
+                        mCursor.getString(INDEX_QUOTE_BID_PRICE),
+                        mCursor.getString(INDEX_QUOTE_CREATED),
+                        mCursor.getString(INDEX_QUOTE_ISUP),
+                        mCursor.getString(INDEX_QUOTE_ISCURRENT),
+                        mCursor.getDouble(INDEX_QUOTE_PERCENT_CHANGE_REAL)
+                );
 
-                        if(!mTwoPane) {
-                            Intent intent = new Intent(getApplicationContext(), StockDetailActivity.class);
-                            intent.putExtra(StockDetailFragment.ARG_QUOTE_PARCABLE,quote);
-                            startActivity(intent);
-                        }else{
-                            Bundle arguments = new Bundle();
-                            arguments.putParcelable(StockDetailFragment.ARG_QUOTE_PARCABLE,quote);
-                            arguments.putString(StockDetailFragment.ARG_PARENT,StockDetailFragment.LIST_ACTIVITY);
-                            StockDetailFragment detailFragment = new StockDetailFragment();
-                            detailFragment.setArguments(arguments);
-                            getSupportFragmentManager().
-                                    beginTransaction().
-                                    replace(
-                                            R.id.stock_detail_container,
-                                            detailFragment
-                                    ).commit();
-                        }
-                    }
-                }));
+                if(!mTwoPane) {
+                    Intent intent = new Intent(getApplicationContext(), StockDetailActivity.class);
+                    intent.putExtra(StockDetailFragment.ARG_QUOTE_PARCABLE,quote);
+                    startActivity(intent);
+                }else{
+                    Bundle arguments = new Bundle();
+                    arguments.putParcelable(StockDetailFragment.ARG_QUOTE_PARCABLE,quote);
+                    arguments.putString(StockDetailFragment.ARG_PARENT,StockDetailFragment.LIST_ACTIVITY);
+                    StockDetailFragment detailFragment = new StockDetailFragment();
+                    detailFragment.setArguments(arguments);
+                    getSupportFragmentManager().
+                            beginTransaction().
+                            replace(
+                                    R.id.stock_detail_container,
+                                    detailFragment
+                            ).commit();
+                }
+            }
+        });
         recyclerView.setAdapter(mCursorAdapter);
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.attachToRecyclerView(recyclerView);
-        fab.setColorNormalResId(R.color.green_500);
-        fab.setColorPressedResId(R.color.green_700);
+        fab.setColorNormalResId(R.color.primary_color);
+        fab.setColorPressedResId(R.color.primary_color_dark);
         fab.setColorRippleResId(R.color.green_accent_200);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {

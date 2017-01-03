@@ -1,38 +1,43 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/green_500">
+    android:background="@color/primary_color">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/widget_heading_layout">
+        android:orientation="horizontal"
+        android:id="@+id/widget_heading_layout"
+        android:contentDescription="@string/header_description">
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginStart="@dimen/activity_horizontal_margin"
-            android:src="@drawable/graph_icon"/>
+            android:src="@drawable/graph_icon"
+            android:contentDescription="@string/stock_hawk_icon"/>
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/app_name_view"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginStart="@dimen/activity_horizontal_margin"
-            android:layout_gravity="center_vertical"/>
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:contentDescription="@string/app_name"/>
     </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="There is no data"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
         android:id="@+id/empty_view"
         android:layout_below="@+id/widget_heading_layout"/>
     <ListView
-        android:id="@+id/weekly_forecast_list_view"
+        android:id="@+id/stocks_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/widget_heading_layout">
-
-    </ListView>
+        android:layout_below="@+id/widget_heading_layout"/>
 </RelativeLayout>

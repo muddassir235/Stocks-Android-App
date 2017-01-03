@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 import com.sam_chordas.android.stockhawk.R;
 import com.sam_chordas.android.stockhawk.data.QuoteProvider;
+import com.sam_chordas.android.stockhawk.touch_helper.ItemClickListener;
 import com.sam_chordas.android.stockhawk.touch_helper.ItemTouchHelperAdapter;
 import com.sam_chordas.android.stockhawk.touch_helper.ItemTouchHelperViewHolder;
 import com.sam_chordas.android.stockhawk.ui.StockListActivity;
@@ -28,26 +29,30 @@ import com.sam_chordas.android.stockhawk.ui.StockListActivity;
 public class QuoteCursorAdapter extends CursorRecyclerViewAdapter<QuoteCursorAdapter.ViewHolder>
     implements ItemTouchHelperAdapter{
 
-  private static Context mContext;
+  private Context mContext;
   private static Typeface customTypeFace;
+  private ItemClickListener itemClickListener;
   private boolean isPercent;
   public QuoteCursorAdapter(Context context, Cursor cursor){
     super(context, cursor);
     mContext = context;
   }
 
+  public void setOnItemClickListener(ItemClickListener itemClickListener){
+    this.itemClickListener = itemClickListener;
+  }
   @Override
   public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
     customTypeFace = Typeface.createFromAsset(mContext.getAssets(), "fonts/VCR_OS.ttf");
     View itemView;
     itemView = LayoutInflater.from(parent.getContext())
             .inflate(R.layout.list_item_quote, parent, false);
-    if(viewType == 1) {
-
-    }else{
-      itemView.setBackgroundResource(R.drawable.touch_selector_darker);
-    }
-    ViewHolder vh = new ViewHolder(itemView);
+      ViewHolder vh = new ViewHolder(itemView,this.itemClickListener);
+      if(viewType == 1) {
+          vh.mRootLL.setBackgroundResource(R.drawable.touch_selector);
+      }else{
+          vh.mRootLL.setBackgroundResource(R.drawable.touch_selector_darker);
+      }
     return vh;
   }
 
@@ -118,7 +123,9 @@ public class QuoteCursorAdapter extends CursorRecyclerViewAdapter<QuoteCursorAda
     public final TextView change;
     public final LinearLayout changeLayout;
     public final ImageView changeArrow;
-    public ViewHolder(View itemView){
+    public final LinearLayout mRootLL;
+    public final ItemClickListener itemClickListener;
+    public ViewHolder(View itemView, final ItemClickListener itemClickListener){
       super(itemView);
       symbol = (TextView) itemView.findViewById(R.id.stock_symbol);
       symbol.setTypeface(customTypeFace);
@@ -128,6 +135,16 @@ public class QuoteCursorAdapter extends CursorRecyclerViewAdapter<QuoteCursorAda
       changeLayout = (LinearLayout) itemView.findViewById(R.id.change_layout);
       changeArrow = (ImageView) itemView.findViewById(R.id.change_arrow);
       change = (TextView) itemView.findViewById(R.id.change);
+      mRootLL = (LinearLayout) itemView.findViewById(R.id.root_ll);
+      this.itemClickListener = itemClickListener;
+      mRootLL.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+          if(itemClickListener!=null){
+            itemClickListener.onClick(getAdapterPosition());
+          }
+        }
+      });
     }
 
     @Override
@@ -142,7 +159,6 @@ public class QuoteCursorAdapter extends CursorRecyclerViewAdapter<QuoteCursorAda
 
     @Override
     public void onClick(View v) {
-
     }
   }
 }

@@ -36,5 +36,7 @@
   <string name="down_arrow">Down Arrow</string>
 
   <string name="appwidget_text">STOCKS</string>
+  <string name="header_description">Stock Hawk Widget Header</string>
+  <string name="stock_hawk_icon">Stock Hawk Icon</string>
 
 </resources>

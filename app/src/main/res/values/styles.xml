@@ -3,27 +3,27 @@
   <!-- Base application theme. -->
   <style name="AppTheme"
       parent="Theme.AppCompat">
-      <item name="colorPrimary">@color/green_500</item>
-      <item name="colorPrimaryDark">@color/green_700</item>
-      <item name="colorAccent">@color/green_500</item>
+      <item name="colorPrimary">@color/primary_color</item>
+      <item name="colorPrimaryDark">@color/primary_color_dark</item>
+      <item name="colorAccent">@color/primary_color</item>
     <!-- Customize your theme here. -->
   </style>
 
   <style name="AppTheme.NoActionBar">
     <item name="windowActionBar">false</item>
     <item name="windowNoTitle">true</item>
-    <item name="colorPrimary">@color/green_500</item>
-    <item name="colorPrimaryDark">@color/green_700</item>
-    <item name="colorAccent">@color/green_250</item>
+    <item name="colorPrimary">@color/primary_color</item>
+    <item name="colorPrimaryDark">@color/primary_color_dark</item>
+    <item name="colorAccent">@color/primary_color</item>
 
   </style>
 
   <style name="AppTheme.DetailNoActionBar">
     <item name="windowActionBar">false</item>
     <item name="windowNoTitle">true</item>
-    <item name="colorPrimary">@color/green_500</item>
+    <item name="colorPrimary">@color/primary_color</item>
     <item name="colorPrimaryDark">@color/darker_grey</item>
-    <item name="colorAccent">@color/green_500</item>
+    <item name="colorAccent">@color/primary_color</item>
 
   </style>
 
