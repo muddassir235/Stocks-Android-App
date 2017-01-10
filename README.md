@@ -1,4 +1,4 @@
-# **Stock Hawk:**    ![](https://github.com/muddassir235/Pop-Movies/blob/master/Files/1483354684_filmreel.png?raw=true)![](https://github.com/muddassir235/Pop-Movies/blob/master/Files/1483354836_android.png?raw=true)![](https://github.com/muddassir235/Pop-Movies/blob/master/Files/theMovieDB_logo.png?raw=true)
+# **Stock Hawk:**    ![](https://github.com/muddassir235/Stocks-Android-App/blob/master/Files/1484045061_trends.png?raw=true)![](https://github.com/muddassir235/Pop-Movies/blob/master/Files/1483354836_android.png?raw=true)![](https://github.com/muddassir235/Stocks-Android-App/blob/master/Files/1484045211_yahoo.png?raw=true)
 An Android application that shows stocks from the Yahoo Finance Database.
 
 # **Overview:**
