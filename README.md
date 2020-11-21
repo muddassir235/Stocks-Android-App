@@ -1,6 +1,8 @@
 # **Stock Hawk:**    ![](https://github.com/muddassir235/Stocks-Android-App/blob/master/Files/1484045061_trends.png?raw=true)![](https://github.com/muddassir235/Pop-Movies/blob/master/Files/1483354836_android.png?raw=true)![](https://github.com/muddassir235/Stocks-Android-App/blob/master/Files/1484045211_yahoo.png?raw=true)
 An Android application that shows stocks from the Yahoo Finance Database.
 
+[More apps by Muddassir Ahmed](https://play.google.com/store/apps/developer?id=Muddassir+Khan):
+
 # **Overview:**
 
 This application has the following features
@@ -49,3 +51,7 @@ Please enable third party app installation from your device's setting in order t
 
 ## **License:**
 This android app is distributed under the Apache [license](https://github.com/muddassir235/Stocks-Android-App/blob/master/license) 2.0.
+
+## [Apps by Muddassir Ahmed](https://play.google.com/store/apps/developer?id=Muddassir+Khan):
+* https://play.google.com/store/apps/details?id=com.muddassirkhan.quran_android
+* https://play.google.com/store/apps/details?id=com.app.kitaabattawheed
